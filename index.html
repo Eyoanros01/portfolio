@@ -4,126 +4,124 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio de Analista de Datos</title>
-    <!--
-     
-    -->
+    <!-- Tipografía elegante para todo el sitio -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navegación fija en la parte superior -->
+    <!-- Navegación superior fija -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#top" class="logo">Mi Portafolio</a>
+            <a href="#top" class="logo">Mi&nbsp;Portafolio</a>
             <ul class="nav-links">
-                <li><a href="#proyecto1">Proyecto 1</a></li>
-                <li><a href="#proyecto2">Proyecto 2</a></li>
-                <li><a href="#proyecto3">Proyecto 3</a></li>
+                <li><a href="#proyecto1">Strategic&nbsp;Asset&nbsp;Analysis</a></li>
+                <li><a href="#proyecto2">Supply&nbsp;Chain&nbsp;Efficiency&nbsp;Analysis</a></li>
+                <li><a href="#proyecto3">Workforce&nbsp;Performance&nbsp;Optimization</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Sección de presentación / About -->
-    <section class="about" id="top">
-        <div class="container about-wrapper">
-            <div class="about-photo">
-                <!-- Fotografía tomada de la página de referencia -->
+    <!-- Sección de presentación tipo héroe -->
+    <section class="hero" id="hero">
+        <div class="container hero-wrapper">
+            <div class="hero-photo">
                 <img src="assets/profile.jpg" alt="Foto de Esdras Yoan García Rosales" />
             </div>
-            <div class="about-info">
-                <h1>Esdras Yoan García Rosales</h1>
-                <p>
-                    Soy un Analista de Datos Junior con formación en Ingeniería en Informática. Manejo
+            <div class="hero-info">
+                <h1>Esdras&nbsp;Yoan&nbsp;García&nbsp;Rosales</h1>
+                <!-- Eliminated the tagline to keep the introduction concise -->
+                <p class="bio">
+                    Soy un analista de datos con formación en ingeniería en informática. Manejo
                     herramientas como Python, SQL, Power BI y Excel para extraer, procesar y visualizar
-                    datos de manera efectiva. Mi enfoque combina pensamiento crítico, atención al detalle y
-                    habilidades analíticas, orientado a resolver problemas reales en entornos empresariales.
-                    Actualmente, construyo soluciones de análisis de datos que impulsan decisiones basadas
-                    en información clara y confiable.
+                    datos de manera efectiva. Mi enfoque combina pensamiento crítico, atención al detalle
+                    y habilidades analíticas para resolver problemas reales en entornos empresariales.
+                    Actualmente construyo soluciones de análisis que impulsan decisiones basadas en
+                    información clara y confiable.
                 </p>
+                <a href="#proyecto1" class="btn btn-primary">Ver mis proyectos</a>
             </div>
         </div>
     </section>
 
     <main class="container">
-        <!-- Proyecto 1 -->
-        <section class="project" id="proyecto1">
+        <!-- Proyecto 1: Strategic Asset Analysis -->
+        <section class="project project-1" id="proyecto1">
             <div class="project-image">
-                <img src="assets/data_analysis.png" alt="Ilustración del proyecto de análisis de datos" />
+                <img src="assets/strategic_asset_analysis.png" alt="Ilustración del análisis de activos estratégicos" />
             </div>
             <div class="project-info">
-                <h2>Proyecto 1: Análisis de Datos</h2>
+                <span class="project-badge project-badge-1">Proyecto 1</span>
+                <h2>Strategic&nbsp;Asset&nbsp;Analysis</h2>
                 <p>
-                    Este proyecto consiste en el análisis de un conjunto de datos
-                    utilizando Python. Incluye la limpieza, exploración y
-                    visualización de información para extraer conclusiones
-                    valiosas.
+                    Cuando un pequeño inversionista apuesta todo a unos pocos activos, corre el riesgo de exponerse a pérdidas innecesarias. En este proyecto revisé datos históricos de acciones, ETFs, bonos y materias primas para comprender cómo cada clase de activo aporta retorno y estabilidad. A partir de métricas de riesgo y rentabilidad, identifiqué qué activos equilibran mejor una cartera y cuáles son útiles como refugio en épocas de volatilidad. El resultado es una guía visual que compara distintos escenarios y sugiere combinaciones de activos según el perfil de inversión. El dashboard interactivo resume estos hallazgos de manera clara y te invita a explorar cómo una cartera bien diversificada puede mejorar las perspectivas de crecimiento.
                 </p>
                 <div class="project-links">
-                    <!-- Enlace al código en Colab y al dashboard de Power BI -->
-                    <a href="https://colab.research.google.com/drive/1oubI8E6efz6R2ZvSaM6_75JzeV0KbcWK#scrollTo=1LJ9Dz_Zlj2T" target="_blank" class="btn btn-code">Ver Código en Colab</a>
-                    <a href="#" target="_blank" class="btn btn-dashboard">Ver Dashboard</a>
+                    <a href="https://colab.research.google.com/drive/1oubI8E6efz6R2ZvSaM6_75JzeV0KbcWK#scrollTo=1LJ9Dz_Zlj2T" target="_blank" class="btn btn-code">Ver&nbsp;Código&nbsp;en Colab</a>
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiMjhiOGMyNWUtMmQxYi00NDFhLTlmOGQtYzNiODA3ZGMzNDk0IiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9" target="_blank" class="btn btn-dashboard">Ver&nbsp;Dashboard</a>
                 </div>
                 <h3>Dashboard interactivo</h3>
                 <div class="dashboard">
-                    <!-- Sustituye la URL con el enlace generado por “Publicar en la Web” de Power BI -->
                     <iframe
-                        src=""
-                        title="Dashboard de Power BI"
+                        src="https://app.powerbi.com/view?r=eyJrIjoiMjhiOGMyNWUtMmQxYi00NDFhLTlmOGQtYzNiODA3ZGMzNDk0IiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9"
+                        title="Dashboard de Strategic Asset Analysis"
                         allowfullscreen
                     ></iframe>
                 </div>
             </div>
         </section>
 
-        <!-- Proyecto 2 -->
-        <section class="project" id="proyecto2">
+        <!-- Proyecto 2: Supply Chain Efficiency Analysis -->
+        <section class="project project-2" id="proyecto2">
             <div class="project-image">
-                <img src="assets/hr_analytics.png" alt="Ilustración del proyecto de análisis de recursos humanos" />
+                <img src="assets/supply_chain_efficiency.png" alt="Ilustración del análisis de eficiencia en la cadena de suministro" />
             </div>
             <div class="project-info">
-                <h2>Proyecto 2: HR Analytics</h2>
+                <span class="project-badge project-badge-2">Proyecto 2</span>
+                <h2>Supply&nbsp;Chain&nbsp;Efficiency&nbsp;Analysis</h2>
                 <p>
-                    Aplicación de Python para analizar datos de recursos
-                    humanos. El proyecto busca identificar tendencias en
-                    contratación, retención y desempeño mediante métricas
-                    clave.
+                    Un retraso en la entrega no es un simple contratiempo: es un síntoma de ineficiencias que se traducen en costes y clientes insatisfechos. En este caso de estudio, utilicé datos de la cadena de suministro de una empresa para detectar cuellos de botella, analizar el desempeño de distintos productos y modos de envío, y modelar su impacto económico. Los hallazgos permiten priorizar acciones: desde ajustar rutas con mayor carga hasta replantear inventarios. El valor del análisis reside en mostrar, con pruebas concretas, cómo pequeñas mejoras logísticas pueden transformar la experiencia del cliente. El dashboard interactivo detalla cada paso para que explores los resultados y sus implicaciones estratégicas.
                 </p>
                 <div class="project-links">
-                    <a href="#" target="_blank" class="btn btn-code">Ver Código en Colab</a>
-                    <a href="#" target="_blank" class="btn btn-dashboard">Ver Dashboard</a>
+                    <a href="https://colab.research.google.com/drive/1UYurl7BeBwWREzreNlFHaqN1b8HZUbly#scrollTo=V3QY7qqajnZR" target="_blank" class="btn btn-code">Ver&nbsp;Código&nbsp;en Colab</a>
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiY2EzODI0NmUtNThlYS00OGI0LWI0YTYtOGYzZmU2NjIxMzhlIiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9" target="_blank" class="btn btn-dashboard">Ver&nbsp;Dashboard</a>
                 </div>
                 <h3>Dashboard interactivo</h3>
                 <div class="dashboard">
                     <iframe
-                        src=""
-                        title="Dashboard de Recursos Humanos"
+                        src="https://app.powerbi.com/view?r=eyJrIjoiY2EzODI0NmUtNThlYS00OGI0LWI0YTYtOGYzZmU2NjIxMzhlIiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9"
+                        title="Dashboard de Supply Chain Efficiency Analysis"
                         allowfullscreen
                     ></iframe>
                 </div>
             </div>
         </section>
 
-        <!-- Proyecto 3 -->
-        <section class="project" id="proyecto3">
+        <!-- Proyecto 3: Workforce Performance Optimization -->
+        <section class="project project-3" id="proyecto3">
             <div class="project-image">
-                <img src="assets/personal_finance.png" alt="Ilustración del proyecto de finanzas personales" />
+                <img src="assets/workforce_performance.png" alt="Ilustración del análisis de rendimiento laboral" />
             </div>
             <div class="project-info">
-                <h2>Proyecto 3: Finanzas Personales</h2>
+                <span class="project-badge project-badge-3">Proyecto 3</span>
+                <h2>Workforce&nbsp;Performance&nbsp;Optimization</h2>
                 <p>
-                    Proyecto desarrollado en Python para analizar gastos e
-                    ingresos personales. Permite visualizar patrones de
-                    consumo y planificar presupuestos de manera eficiente.
+                    La productividad no depende únicamente de horas trabajadas, sino de entender cómo se distribuyen las capacidades dentro de una organización. En este proyecto procesé el desempeño de más de 100 000 colaboradores, identificando los perfiles y departamentos que aportan mayor valor y aquellos que presentan márgenes de mejora. Al cruzar métricas de rendimiento con variables demográficas y de puesto, elaboré recomendaciones para optimizar la asignación de recursos y elevar la eficiencia sin sacrificar el bienestar del empleado. Descubre en el dashboard cuáles fueron los patrones más reveladores y cómo podrían influir en decisiones de contratación y desarrollo profesional.
                 </p>
                 <div class="project-links">
-                    <a href="#" target="_blank" class="btn btn-code">Ver Código en Colab</a>
-                    <a href="#" target="_blank" class="btn btn-dashboard">Ver Dashboard</a>
+                    <a href="https://colab.research.google.com/drive/188xnZKX5GoEYAEy8sCs6J_LnNq5aRTkE#scrollTo=TjGunxl0aJjl" target="_blank" class="btn btn-code">Ver&nbsp;Código&nbsp;en Colab</a>
+                    <a href="https://app.powerbi.com/view?r=eyJrIjoiMzg0YTJjZGEtNWEzOC00ZGEwLWEyN2UtZTM0NGFjYTNmMGEwIiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9" target="_blank" class="btn btn-dashboard">Ver&nbsp;Dashboard</a>
                 </div>
                 <h3>Dashboard interactivo</h3>
                 <div class="dashboard">
                     <iframe
-                        src=""
-                        title="Dashboard de Finanzas Personales"
+                        src="https://app.powerbi.com/view?r=eyJrIjoiMzg0YTJjZGEtNWEzOC00ZGEwLWEyN2UtZTM0NGFjYTNmMGEwIiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9"
+                        title="Dashboard de Workforce Performance Optimization"
                         allowfullscreen
                     ></iframe>
                 </div>
@@ -136,12 +134,12 @@
         <div class="container">
             <h2>Contacto</h2>
             <p>
-                Si deseas saber más sobre mis proyectos o colaborar en un
-                análisis, no dudes en ponerte en contacto.
+                Si deseas saber más sobre mis proyectos o colaborar en un análisis,
+                no dudes en ponerte en contacto.
             </p>
             <p>
                 Correo electrónico:
-                <a href="mailto:tuemail@correo.com">tuemail@correo.com</a>
+                <a href="mailto:eyoanros@gmail.com">eyoanros@gmail.com</a>
             </p>
         </div>
     </footer>
