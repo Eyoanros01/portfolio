@@ -8,16 +8,33 @@
     <!-- Tipografía -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    />
 
-    <!-- Estilos -->
+    <!-- Estilos globales -->
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Ajuste de tamaño para TODOS los dashboards -->
+    <style>
+        .dashboard iframe {
+            width: 100%;
+            height: 850px;      /* puedes ajustar 750–900 según gusto */
+            border: none;
+            border-radius: 12px; /* opcional, solo estético */
+        }
+
+        /* Opcional: que la sección dashboard no tenga overflow raro en mobile */
+        @media (max-width: 768px) {
+            .dashboard iframe {
+                height: 600px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-    <!-- Navegación -->
+    <!-- Navegación superior fija -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#top" class="logo">Mi&nbsp;Portafolio</a>
@@ -30,7 +47,7 @@
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Sección de presentación tipo héroe -->
     <section class="hero" id="hero">
         <div class="container hero-wrapper">
             <div class="hero-photo">
@@ -39,10 +56,12 @@
             <div class="hero-info">
                 <h1>Esdras&nbsp;Yoan&nbsp;García&nbsp;Rosales</h1>
                 <p class="bio">
-                    Soy un analista de datos con formación en ingeniería en informática. Manejo herramientas como Python,
-                    SQL, Power BI y Excel para extraer, procesar y visualizar datos de manera efectiva. Mi enfoque combina
-                    pensamiento crítico, atención al detalle y habilidades analíticas para resolver problemas reales en
-                    entornos empresariales.
+                    Soy un analista de datos con formación en ingeniería en informática. Manejo
+                    herramientas como Python, SQL, Power&nbsp;BI y Excel para extraer, procesar y visualizar
+                    datos de manera efectiva. Mi enfoque combina pensamiento crítico, atención al detalle
+                    y habilidades analíticas para resolver problemas reales en entornos empresariales.
+                    Actualmente construyo soluciones de análisis que impulsan decisiones basadas en
+                    información clara y confiable.
                 </p>
                 <a href="#proyecto1" class="btn btn-primary">Ver mis proyectos</a>
             </div>
@@ -50,138 +69,156 @@
     </section>
 
     <main class="container">
-
-        <!-- PROYECTO 1: CREDIT RISK ANALYSIS CARDS -->
+        <!-- PROYECTO 1: Credit Risk Analysis Cards -->
         <section class="project project-1" id="proyecto1">
             <div class="project-image">
                 <img src="assets/credit_risk_analysis.png" alt="Ilustración del análisis de riesgo crediticio" />
             </div>
-
             <div class="project-info">
-                <span class="project-badge project-badge-1">Proyecto 1</span>
+                <span class="project-badge project-badge-1">Proyecto&nbsp;1</span>
                 <h2>Credit&nbsp;Risk&nbsp;Analysis&nbsp;Cards</h2>
-
                 <p>
-                    La gestión del riesgo crediticio no solo consiste en identificar quién está en mora, sino en comprender
-                    los patrones que explican por qué ciertos segmentos incumplen más que otros. En este proyecto construí un
-                    sistema de “Credit Risk Cards” que resume, de forma clara y ejecutiva, el perfil de cada grupo de clientes
-                    según su comportamiento de pago, nivel de exposición, probabilidad de mora y señales tempranas de riesgo.
-                    Gracias al análisis de ingresos, historial de pagos, edad, líneas de crédito y frecuencia de uso, fue
-                    posible detectar segmentos altamente sensibles al impago y otros con estabilidad financiera. El dashboard
-                    interactivo permite comparar perfiles, monitorear indicadores clave y tomar mejores decisiones en políticas
-                    de crédito, otorgamiento, recuperación y seguimiento.
+                    La gestión del riesgo crediticio no solo consiste en identificar quién está en mora,
+                    sino en comprender los patrones que explican por qué ciertos segmentos incumplen más
+                    que otros. En este proyecto construí un sistema de “Credit Risk Cards” que resume,
+                    de forma clara y ejecutiva, el perfil de cada grupo de clientes según su comportamiento
+                    de pago, nivel de exposición, probabilidad de mora y señales tempranas de riesgo.
+                    Gracias al análisis de ingresos, historial de pagos, edad, líneas de crédito y
+                    frecuencia de uso, fue posible detectar segmentos altamente sensibles al impago
+                    y otros con estabilidad financiera. El dashboard interactivo permite comparar perfiles,
+                    monitorear indicadores clave y tomar mejores decisiones en políticas de crédito,
+                    otorgamiento, recuperación y seguimiento.
                 </p>
-
                 <div class="project-links">
-                    <a href="AQUI_VA_EL_LINK_DE_TU_NOTEBOOK"
-                        target="_blank" class="btn btn-code">Ver&nbsp;Código&nbsp;en&nbsp;Colab</a>
-
-                    <a href="https://app.powerbi.com/view?r=eyJrIjoiMjdlZGY0NTMtZjU5OS00MjE2LWI5ZWMtNzhlYzNlMjdiMWFhIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9"
-                        target="_blank" class="btn btn-dashboard">Ver&nbsp;Dashboard</a>
+                    <a
+                        href="https://colab.research.google.com/drive/1dfwpwwys3dJv-UocrnZFD9pR-rLpdGYm#scrollTo=VJOhnEjW4gw1"
+                        target="_blank"
+                        class="btn btn-code"
+                    >
+                        Ver&nbsp;Código&nbsp;en&nbsp;Colab
+                    </a>
+                    <a
+                        href="https://app.powerbi.com/view?r=eyJrIjoiMjdlZGY0NTMtZjU5OS00MjE2LWI5ZWMtNzhlYzNlMjdiMWFhIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9"
+                        target="_blank"
+                        class="btn btn-dashboard"
+                    >
+                        Ver&nbsp;Dashboard
+                    </a>
                 </div>
-
                 <h3>Dashboard interactivo</h3>
-
                 <div class="dashboard">
                     <iframe
                         src="https://app.powerbi.com/view?r=eyJrIjoiMjdlZGY0NTMtZjU5OS00MjE2LWI5ZWMtNzhlYzNlMjdiMWFhIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9"
                         title="Dashboard de Credit Risk Analysis Cards"
-                        allowfullscreen>
-                    </iframe>
+                        allowfullscreen
+                    ></iframe>
                 </div>
             </div>
         </section>
 
-        <!-- PROYECTO 2: STRATEGIC ASSET ANALYSIS -->
+        <!-- PROYECTO 2: Strategic Asset Analysis -->
         <section class="project project-2" id="proyecto2">
             <div class="project-image">
-                <img src="assets/strategic_asset_analysis.png"
-                    alt="Ilustración del análisis de activos estratégicos" />
+                <img src="assets/strategic_asset_analysis.png" alt="Ilustración del análisis de activos estratégicos" />
             </div>
-
             <div class="project-info">
-                <span class="project-badge project-badge-2">Proyecto 2</span>
+                <span class="project-badge project-badge-2">Proyecto&nbsp;2</span>
                 <h2>Strategic&nbsp;Asset&nbsp;Analysis</h2>
-
                 <p>
                     Cuando un pequeño inversionista apuesta todo a unos pocos activos, corre el riesgo de exponerse a
                     pérdidas innecesarias. En este proyecto revisé datos históricos de acciones, ETFs, bonos y materias
-                    primas para comprender cómo cada clase de activo aporta retorno y estabilidad. Con métricas de riesgo y
-                    rentabilidad, identifiqué qué activos equilibran mejor una cartera y cuáles funcionan como refugio en
-                    épocas de volatilidad. El dashboard interactivo resume estos hallazgos y te permite explorar diferentes
-                    configuraciones de cartera según el perfil de inversión.
+                    primas para comprender cómo cada clase de activo aporta retorno y estabilidad. A partir de métricas
+                    de riesgo y rentabilidad, identifiqué qué activos equilibran mejor una cartera y cuáles son útiles como
+                    refugio en épocas de volatilidad. El resultado es una guía visual que compara distintos escenarios y
+                    sugiere combinaciones de activos según el perfil de inversión. El dashboard interactivo resume estos
+                    hallazgos de manera clara y te invita a explorar cómo una cartera bien diversificada puede mejorar
+                    las perspectivas de crecimiento.
                 </p>
-
                 <div class="project-links">
-                    <a href="https://colab.research.google.com/drive/1oubI8E6efz6R2ZvSaM6_75JzeV0KbcWK#scrollTo=1LJ9Dz_Zlj2T"
-                        target="_blank" class="btn btn-code">Ver Código en Colab</a>
-
-                    <a href="https://app.powerbi.com/view?r=eyJrIjoiMjhiOGMyNWUtMmQxYi00NDFhLTlmOGQtYzNiODA3ZGMzNDk0IiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9"
-                        target="_blank" class="btn btn-dashboard">Ver Dashboard</a>
+                    <a
+                        href="https://colab.research.google.com/drive/1oubI8E6efz6R2ZvSaM6_75JzeV0KbcWK#scrollTo=1LJ9Dz_Zlj2T"
+                        target="_blank"
+                        class="btn btn-code"
+                    >
+                        Ver&nbsp;Código&nbsp;en&nbsp;Colab
+                    </a>
+                    <a
+                        href="https://app.powerbi.com/view?r=eyJrIjoiMjhiOGMyNWUtMmQxYi00NDFhLTlmOGQtYzNiODA3ZGMzNDk0IiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9"
+                        target="_blank"
+                        class="btn btn-dashboard"
+                    >
+                        Ver&nbsp;Dashboard
+                    </a>
                 </div>
-
                 <h3>Dashboard interactivo</h3>
-
                 <div class="dashboard">
                     <iframe
                         src="https://app.powerbi.com/view?r=eyJrIjoiMjhiOGMyNWUtMmQxYi00NDFhLTlmOGQtYzNiODA3ZGMzNDk0IiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9"
-                        title="Dashboard Strategic Asset Analysis"
-                        allowfullscreen>
-                    </iframe>
+                        title="Dashboard de Strategic Asset Analysis"
+                        allowfullscreen
+                    ></iframe>
                 </div>
             </div>
         </section>
 
-        <!-- PROYECTO 3: SUPPLY CHAIN -->
+        <!-- PROYECTO 3: Supply Chain Efficiency Analysis -->
         <section class="project project-3" id="proyecto3">
             <div class="project-image">
-                <img src="assets/supply_chain_efficiency.png"
-                    alt="Ilustración del análisis de cadena de suministro" />
+                <img src="assets/supply_chain_efficiency.png" alt="Ilustración del análisis de eficiencia en la cadena de suministro" />
             </div>
-
             <div class="project-info">
-                <span class="project-badge project-badge-3">Proyecto 3</span>
+                <span class="project-badge project-badge-3">Proyecto&nbsp;3</span>
                 <h2>Supply&nbsp;Chain&nbsp;Efficiency&nbsp;Analysis</h2>
-
                 <p>
-                    Un retraso en la entrega no es un simple contratiempo: es un síntoma de ineficiencias que se traducen en
-                    costes y clientes insatisfechos. Analicé datos de envíos, productos, rutas y modos de transporte para
-                    identificar cuellos de botella y evaluar su impacto económico. Los hallazgos ayudan a priorizar acciones
-                    para mejorar el rendimiento logístico y optimizar la experiencia del cliente. El dashboard permite
-                    explorar estas dinámicas en detalle.
+                    Un retraso en la entrega no es un simple contratiempo: es un síntoma de ineficiencias que se traducen
+                    en costes y clientes insatisfechos. En este caso de estudio, utilicé datos de la cadena de suministro
+                    de una empresa para detectar cuellos de botella, analizar el desempeño de distintos productos y modos
+                    de envío, y modelar su impacto económico. Los hallazgos permiten priorizar acciones: desde ajustar rutas
+                    con mayor carga hasta replantear inventarios. El valor del análisis reside en mostrar, con pruebas
+                    concretas, cómo pequeñas mejoras logísticas pueden transformar la experiencia del cliente. El dashboard
+                    interactivo detalla cada paso para que explores los resultados y sus implicaciones estratégicas.
                 </p>
-
                 <div class="project-links">
-                    <a href="https://colab.research.google.com/drive/1UYurl7BeBwWREzreNlFHaqN1b8HZUbly#scrollTo=V3QY7qqajnZR"
-                        target="_blank" class="btn btn-code">Ver Código en Colab</a>
-
-                    <a href="https://app.powerbi.com/view?r=eyJrIjoiY2EzODI0NmUtNThlYS00OGI0LWI0YTYtOGYzZmU2NjIxMzhlIiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9"
-                        target="_blank" class="btn btn-dashboard">Ver Dashboard</a>
+                    <a
+                        href="https://colab.research.google.com/drive/1UYurl7BeBwWREzreNlFHaqN1b8HZUbly#scrollTo=V3QY7qqajnZR"
+                        target="_blank"
+                        class="btn btn-code"
+                    >
+                        Ver&nbsp;Código&nbsp;en&nbsp;Colab
+                    </a>
+                    <a
+                        href="https://app.powerbi.com/view?r=eyJrIjoiY2EzODI0NmUtNThlYS00OGI0LWI0YTYtOGYzZmU2NjIxMzhlIiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9"
+                        target="_blank"
+                        class="btn btn-dashboard"
+                    >
+                        Ver&nbsp;Dashboard
+                    </a>
                 </div>
-
                 <h3>Dashboard interactivo</h3>
-
                 <div class="dashboard">
                     <iframe
                         src="https://app.powerbi.com/view?r=eyJrIjoiY2EzODI0NmUtNThlYS00OGI0LWI0YTYtOGYzZmU2NjIxMzhlIiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9"
-                        title="Dashboard Supply Chain"
-                        allowfullscreen>
-                    </iframe>
+                        title="Dashboard de Supply Chain Efficiency Analysis"
+                        allowfullscreen
+                    ></iframe>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- Contacto -->
+    <!-- Sección de contacto -->
     <footer class="footer" id="contacto">
         <div class="container">
             <h2>Contacto</h2>
-            <p>Correo electrónico:
+            <p>
+                Si deseas saber más sobre mis proyectos o colaborar en un análisis,
+                no dudes en ponerte en contacto.
+            </p>
+            <p>
+                Correo electrónico:
                 <a href="mailto:eyoanros@gmail.com">eyoanros@gmail.com</a>
             </p>
         </div>
     </footer>
-
 </body>
 </html>
