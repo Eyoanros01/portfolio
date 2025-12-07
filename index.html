@@ -20,10 +20,11 @@
             --bg: #020617;          /* fondo casi negro */
             --bg-elevated: #020617;
             --fg: #e5e7eb;          /* texto principal */
-            --muted: #94a3b8;       /* texto secundario */
+            --fg-strong: #f9fafb;   /* texto muy visible (títulos) */
+            --muted: #9ca3af;       /* texto secundario (un poco más claro que antes) */
             --accent: #22c55e;      /* verde principal */
             --accent-soft: rgba(34, 197, 94, 0.15);
-            --border-subtle: #1e293b;
+            --border-subtle: #1f2933;
         }
 
         * {
@@ -92,6 +93,7 @@
             font-weight: 700;
             letter-spacing: -0.03em;
             margin: 0 0 0.25rem;
+            color: var(--fg-strong);
         }
 
         .sidebar-header h2 {
@@ -173,6 +175,7 @@
         .section-title {
             font-size: 1.4rem;
             margin: 0.4rem 0 1.25rem;
+            color: var(--fg-strong);
         }
 
         .section-body p {
@@ -186,7 +189,7 @@
         .intro-highlight {
             font-size: 1.1rem;
             margin-bottom: 1.5rem;
-            color: var(--fg);
+            color: var(--fg-strong);
         }
 
         .intro-highlight strong {
@@ -221,7 +224,7 @@
 
         .btn-secondary {
             border-color: var(--border-subtle);
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(15, 23, 42, 0.9);
             color: var(--muted);
             margin-left: 0.75rem;
         }
@@ -242,7 +245,7 @@
             border-radius: 1rem;
             background:
                 radial-gradient(circle at top left, rgba(15, 23, 42, 0.9) 0, #020617 55%, #020617 100%);
-            border: 1px solid rgba(148, 163, 184, 0.18);
+            border: 1px solid rgba(148, 163, 184, 0.22);
             box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
         }
 
@@ -260,17 +263,19 @@
             justify-content: center;
             padding: 0.15rem 0.7rem;
             border-radius: 999px;
-            border: 1px solid rgba(148, 163, 184, 0.4);
+            border: 1px solid rgba(148, 163, 184, 0.6);
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            color: var(--muted);
+            color: var(--fg-strong);
+            background: rgba(15, 23, 42, 0.9);
             margin-bottom: 0.6rem;
         }
 
         .project-info h2 {
             margin: 0 0 0.75rem;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
+            color: var(--fg-strong);   /* TÍTULOS BIEN VISIBLES */
         }
 
         .project-info p {
@@ -294,7 +299,12 @@
         .project h3 {
             margin: 0 0 0.7rem;
             font-size: 0.95rem;
-            color: var(--muted);
+            color: var(--fg-strong);
+        }
+
+        .dashboard {
+            overflow: hidden; /* evita sobrantes alrededor del iframe */
+            border-radius: 12px;
         }
 
         .dashboard iframe {
@@ -302,8 +312,8 @@
             height: 620px;
             border: none;
             border-radius: 12px;
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
-            background: #020617;
+            display: block;            /* elimina espacios extra */
+            background: #020617;       /* hace match con el fondo */
         }
 
         @media (max-width: 768px) {
@@ -337,7 +347,7 @@
 </head>
 <body>
 
-    <!-- Nav antiguo oculto (no se ve, pero no rompe nada) -->
+    <!-- Nav antiguo oculto (no se ve) -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#top" class="logo">Mi Portafolio</a>
@@ -358,8 +368,8 @@
                     <h1>Esdras García</h1>
                     <h2>Data Analyst</h2>
                     <p>
-                        Analista de datos junior con enfoque en finanzas, riesgo crediticio y eficiencia operativa.
-                        Me interesa construir soluciones claras, medibles y fáciles de usar para equipos de negocio.
+                        Analista de datos junior con base técnica sólida y enfoque en construir soluciones claras,
+                        medibles y útiles para equipos de negocio en distintos sectores.
                     </p>
                 </div>
 
@@ -373,8 +383,8 @@
             </div>
 
             <div class="sidebar-footer">
-                <div>Perfil junior, orientado a aprender rápido y aportar desde el primer día.</div>
-                <div>Basado en Honduras · abierto a trabajo remoto.</div>
+                <div>Perfil junior, orientado a aprender rápido y aportar valor desde el primer día.</div>
+                <div>Basado en Honduras · abierto a trabajo remoto en cualquier industria.</div>
             </div>
         </aside>
 
@@ -393,14 +403,14 @@
                     <p>
                         Trabajo principalmente con <strong>Python</strong>, <strong>SQL</strong>,
                         <strong>Power&nbsp;BI</strong> y Excel para extraer, limpiar y modelar información.
-                        Me interesa especialmente el contexto de <strong>banca, riesgo crediticio y análisis
-                        financiero</strong>, donde los datos tienen impacto directo en rentabilidad y riesgo.
+                        Me interesa entender el contexto de negocio detrás de cada dataset: qué problema se quiere
+                        resolver, qué métricas realmente importan y cómo comunicar los resultados a personas no técnicas.
                     </p>
                     <p>
-                        Cada proyecto de mi portafolio está planteado como un caso de negocio real: defino el
-                        problema, creo una estructura de análisis clara, documento las decisiones técnicas y cierro
-                        con dashboards pensados para usuarios no técnicos. Mi objetivo es ser un analista junior
-                        confiable, que entiende el “por qué” detrás de cada métrica y no solo el “cómo”.
+                        Cada proyecto de mi portafolio está planteado como un caso de uso real: defino el
+                        problema, estructuro el análisis, documento decisiones técnicas y cierro con dashboards
+                        pensados para la toma de decisiones. Mi objetivo es ser un analista junior confiable,
+                        con criterio y capaz de adaptarse a diferentes industrias y equipos.
                     </p>
                     <div class="hero-cta">
                         <a href="#proyectos" class="btn">Ver proyectos con dashboards</a>
@@ -522,7 +532,8 @@
                 <div class="section-body">
                     <p>
                         Si te interesa mi trabajo y querés explorar cómo puedo aportar como analista de datos junior
-                        en tu equipo de banca, riesgo o negocio digital, podemos coordinar una conversación corta.
+                        en tu equipo o proyecto, podemos coordinar una conversación corta para revisar necesidades
+                        y posibles soluciones.
                     </p>
                     <p>
                         Puedes escribirme directamente a
