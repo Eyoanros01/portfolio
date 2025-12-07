@@ -1,66 +1,76 @@
 <style>
-    /* Cada sección ocupa EXACTAMENTE una pantalla completa */
+    /* Cada sección ocupa pantalla completa pero más compacta */
     section.project {
-        height: 100vh;              /* Sección tamaño pantalla */
+        height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; /* Texto arriba – Dashboard abajo */
-        padding: 2rem 0;
+        justify-content: space-between;
+        padding: 1rem 0;
+        max-width: 1150px;
+        margin: auto;
     }
 
-    /* Ajuste de imagen pequeña y elegante */
+    /* Encabezado más compacto */
+    .project-info {
+        flex: 0 0 auto;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Imagen del proyecto pequeña y elegante */
     .project-image {
-        max-width: 220px;
+        max-width: 180px;
         margin-bottom: 0.3rem;
     }
 
     .project-image img {
         width: 100%;
-        border-radius: 14px;
-        display: block;
+        border-radius: 12px;
     }
 
-    /* Contenido textual compacto */
-    .project-info {
-        flex: 0 0 auto;
-        margin-bottom: 1rem;
+    /* Texto más grande y legible */
+    .project-info h2 {
+        font-size: 1.9rem;
+        margin-bottom: 0.4rem;
     }
 
     .project-info p {
-        max-width: 800px;
-        margin-bottom: 0.8rem;
+        font-size: 1.15rem;
+        line-height: 1.45rem;
+        max-width: 900px;
     }
 
+    /* Botones más pegados al texto */
     .project-links {
-        margin: 0.8rem 0;
+        margin: 0.4rem 0 0.7rem 0;
         display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
+        gap: 0.7rem;
     }
 
-    /* Dashboard protagonista, ocupa 55% de la pantalla */
+    /* El dashboard ocupa menos alto (como si hubieras hecho zoom out) */
     .dashboard {
-        width: 100%;
         flex: 1 1 auto;
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
     .dashboard iframe {
         width: 100%;
-        height: 55vh;               /* Protagonista pero no exagerado */
+        height: 45vh;   /* <--- Tamaño clave, compacto pero usable */
         border: none;
         border-radius: 16px;
-        box-shadow: 0 22px 55px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 22px 55px rgba(0, 0, 0, 0.28);
     }
 
-    /* Ajuste para móviles */
     @media (max-width: 768px) {
         section.project {
-            height: auto; /* En móvil no usamos pantalla completa */
+            height: auto;
         }
         .dashboard iframe {
             height: 60vh;
+        }
+        .project-info p {
+            font-size: 1rem;
         }
     }
 </style>
