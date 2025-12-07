@@ -16,19 +16,69 @@
     <!-- Estilos globales -->
     <link rel="stylesheet" href="styles.css" />
 
-    <!-- Ajuste de tamaño para TODOS los dashboards -->
+    <!-- Ajuste elegante para que el dashboard sea el objeto principal -->
     <style>
-        .dashboard iframe {
-            width: 100%;
-            height: 850px;      /* puedes ajustar 750–900 según gusto */
-            border: none;
-            border-radius: 12px; /* opcional, solo estético */
+        /* Cada proyecto en columna (texto + dashboard centrado) */
+        .project {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
         }
 
-        /* Opcional: que la sección dashboard no tenga overflow raro en mobile */
+        .project-image {
+            max-width: 280px;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-image img {
+            width: 100%;
+            border-radius: 14px;
+            display: block;
+        }
+
+        .project-info {
+            width: 100%;
+        }
+
+        .project-badge {
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-info h2 {
+            margin-top: 0;
+        }
+
+        .project-links {
+            margin: 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        /* Contenedor del dashboard */
+        .dashboard {
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        /* Dashboard grande, elegante y usable */
+        .dashboard iframe {
+            width: 100%;
+            height: 90vh; /* Protagonista de la sección */
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 22px 55px rgba(0, 0, 0, 0.35);
+        }
+
+        /* Ajuste para pantallas pequeñas */
         @media (max-width: 768px) {
             .dashboard iframe {
-                height: 600px;
+                height: 75vh;
+            }
+
+            .project-image {
+                max-width: 220px;
             }
         }
     </style>
