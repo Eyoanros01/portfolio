@@ -8,30 +8,23 @@
     <!-- Tipografía elegante -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 
-    <!-- Tus estilos base -->
     <link rel="stylesheet" href="styles.css" />
 
-    <!-- Ajustes: scroll tipo diapositiva + layout lateral + dashboards -->
+    <!-- ===== ESTILOS DEL LAYOUT / SLIDE / IMAGEN IZQUIERDA ===== -->
     <style>
-        /* ===== SCROLL TIPO DIAPOSITIVA ===== */
-        html,
-        body {
+
+        /* ===== SCROLL TIPO PRESENTACIÓN ===== */
+        html, body {
             height: 100%;
             scroll-behavior: smooth;
         }
-
         body {
             scroll-snap-type: y mandatory;
         }
 
-        .hero,
-        .project,
-        .footer {
+        .hero, .project, .footer {
             scroll-snap-align: start;
             scroll-snap-stop: always;
             min-height: 100vh;
@@ -40,28 +33,16 @@
             justify-content: flex-start;
         }
 
-        .hero .container,
-        .project .project-info,
-        .footer .container {
-            margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        /* ===== Texto y dashboards ===== */
-        .project-info p {
-            font-size: 1.05rem;
-            line-height: 1.6;
-        }
-
+        /* ===== Dashboards ===== */
         .dashboard iframe {
             width: 100%;
-            height: 620px; /* puedes subir a 650–700 si lo quieres aún más grande */
+            height: 620px;
             border: none;
             border-radius: 12px;
             box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
         }
 
-        /* ===== Layout lateral: texto izquierda, imagen derecha ===== */
+        /* ===== Imagen IZQUIERDA + texto DERECHA ===== */
         .project-content {
             display: flex;
             align-items: flex-start;
@@ -69,84 +50,79 @@
             margin-bottom: 1.5rem;
         }
 
-        .project-text {
-            flex: 2;
-        }
-
         .project-side-image {
             flex: 1;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
         .project-side-image img {
             width: 100%;
             max-width: 280px;
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
 
+        .project-text {
+            flex: 2;
+            text-align: left;
+        }
+
+        .project-info p {
+            font-size: 1.07rem;
+            line-height: 1.6;
+        }
+
+        /* RESPONSIVE */
         @media (max-width: 900px) {
-            .hero,
-            .project,
-            .footer {
+            .hero, .project, .footer {
                 min-height: auto;
             }
-
             .project-content {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
             }
-
             .project-text {
-                width: 100%;
+                text-align: center;
             }
-
             .project-side-image img {
                 max-width: 220px;
             }
-
             .dashboard iframe {
                 height: 480px;
             }
-
-            .project-info p {
-                font-size: 1rem;
-            }
         }
+
     </style>
 </head>
 
 <body>
-    <!-- Navegación superior fija -->
+    <!-- NAV -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#top" class="logo">Mi&nbsp;Portafolio</a>
+            <a href="#top" class="logo">Mi Portafolio</a>
             <ul class="nav-links">
-                <li><a href="#proyecto1">Credit&nbsp;Risk&nbsp;Analysis</a></li>
-                <li><a href="#proyecto2">Strategic&nbsp;Asset&nbsp;Analysis</a></li>
-                <li><a href="#proyecto3">Supply&nbsp;Chain&nbsp;Efficiency</a></li>
+                <li><a href="#proyecto1">Credit Risk Analysis</a></li>
+                <li><a href="#proyecto2">Strategic Asset Analysis</a></li>
+                <li><a href="#proyecto3">Supply Chain Efficiency</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Sección de presentación tipo héroe -->
+    <!-- HERO -->
     <section class="hero" id="hero">
         <div class="container hero-wrapper">
             <div class="hero-photo">
                 <img src="assets/profile.jpg" alt="Foto de Esdras Yoan García Rosales" />
             </div>
             <div class="hero-info">
-                <h1>Esdras&nbsp;Yoan&nbsp;García&nbsp;Rosales</h1>
+                <h1>Esdras Yoan García Rosales</h1>
                 <p class="bio">
                     Soy un analista de datos con formación en ingeniería en informática. Manejo
-                    herramientas como Python, SQL, Power&nbsp;BI y Excel para extraer, procesar y visualizar
-                    datos de manera efectiva. Mi enfoque combina pensamiento crítico, atención al detalle
-                    y habilidades analíticas para resolver problemas reales en entornos empresariales.
-                    Actualmente construyo soluciones de análisis que impulsan decisiones basadas en
-                    información clara y confiable.
+                    Python, SQL, Power BI y Excel para extraer, procesar y visualizar datos de forma profesional.
+                    Mi enfoque combina pensamiento crítico y habilidades analíticas para resolver problemas reales.
                 </p>
                 <a href="#proyecto1" class="btn btn-primary">Ver mis proyectos</a>
             </div>
@@ -154,30 +130,36 @@
     </section>
 
     <main class="container">
-        <!-- Proyecto 1: Credit Risk Analysis Cards -->
+
+        <!-- PROYECTO 1 -->
         <section class="project project-1" id="proyecto1">
+
             <div class="project-content">
+                <!-- IMAGEN IZQUIERDA -->
+                <div class="project-side-image">
+                    <img src="assets/credit_risk_analysis.png" alt="Análisis de Riesgo Crediticio" />
+                </div>
+
+                <!-- TEXTO DERECHA -->
                 <div class="project-text">
-                    <span class="project-badge project-badge-1">Proyecto&nbsp;1</span>
-                    <h2>Credit&nbsp;Risk&nbsp;Analysis&nbsp;Cards</h2>
+                    <span class="project-badge project-badge-1">Proyecto 1</span>
+                    <h2>Credit Risk Analysis Cards</h2>
+
                     <p>
                         La gestión del riesgo crediticio no solo consiste en identificar quién está en mora,
                         sino en comprender los patrones que explican por qué ciertos segmentos incumplen.
-                        En este proyecto construí un sistema de “Credit Risk Cards” que resume, de forma
-                        clara y ejecutiva, el perfil de cada grupo de clientes según su comportamiento de pago,
-                        exposición al riesgo y señales tempranas de incumplimiento. El dashboard permite comparar
-                        perfiles, evaluar indicadores clave y tomar decisiones más precisas para políticas de
-                        crédito, recuperación y seguimiento.
+                        Construí un sistema de “Credit Risk Cards” que resume perfiles de clientes, señales de riesgo,
+                        exposición crediticia y comportamiento histórico de pago. El dashboard permite comparar
+                        segmentos, analizar variables críticas y tomar decisiones más acertadas en políticas de crédito.
                     </p>
+
                     <div class="project-links">
                         <a href="https://colab.research.google.com/drive/1dfwpwwys3dJv-UocrnZFD9pR-rLpdGYm#scrollTo=VJOhnEjW4gw1"
-                           target="_blank" class="btn btn-code">Ver&nbsp;Código&nbsp;en&nbsp;Colab</a>
+                           target="_blank" class="btn btn-code">Ver Código en Colab</a>
+
                         <a href="https://app.powerbi.com/view?r=eyJrIjoiMjdlZGY0NTMtZjU5OS00MjE2LWI5ZWMtNzhlYzNlMjdiMWFhIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9"
-                           target="_blank" class="btn btn-dashboard">Ver&nbsp;Dashboard</a>
+                           target="_blank" class="btn btn-dashboard">Ver Dashboard</a>
                     </div>
-                </div>
-                <div class="project-side-image">
-                    <img src="assets/credit_risk_analysis.png" alt="Ilustración del análisis de riesgo crediticio" />
                 </div>
             </div>
 
@@ -185,34 +167,38 @@
             <div class="dashboard">
                 <iframe
                     src="https://app.powerbi.com/view?r=eyJrIjoiMjdlZGY0NTMtZjU5OS00MjE2LWI5ZWMtNzhlYzNlMjdiMWFhIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9"
-                    title="Dashboard de Credit Risk Analysis Cards"
-                    allowfullscreen
                 ></iframe>
             </div>
         </section>
 
-        <!-- Proyecto 2: Strategic Asset Analysis -->
+        <!-- PROYECTO 2 -->
         <section class="project project-2" id="proyecto2">
+
             <div class="project-content">
+                <!-- IMAGEN IZQUIERDA -->
+                <div class="project-side-image">
+                    <img src="assets/strategic_asset_analysis.png" alt="Análisis de Activos Estratégicos" />
+                </div>
+
+                <!-- TEXTO DERECHA -->
                 <div class="project-text">
-                    <span class="project-badge project-badge-2">Proyecto&nbsp;2</span>
-                    <h2>Strategic&nbsp;Asset&nbsp;Analysis</h2>
+                    <span class="project-badge project-badge-2">Proyecto 2</span>
+                    <h2>Strategic Asset Analysis</h2>
+
                     <p>
-                        Cuando un inversionista apuesta todo a unos pocos activos, se expone a pérdidas innecesarias.
-                        Analicé datos históricos de acciones, bonos, ETFs y materias primas para entender cómo cada clase
-                        de activo contribuye al equilibrio de una cartera. El dashboard interactivo resume los escenarios
-                        de riesgo, retorno y diversificación, permitiendo explorar combinaciones óptimas según el perfil
-                        de inversión.
+                        Analicé datos históricos de acciones, ETFs, bonos y materias primas para evaluar
+                        cómo cada activo contribuye al riesgo y retorno de una cartera. El dashboard resume
+                        escenarios comparativos, métricas de volatilidad y rendimiento acumulado, permitiendo
+                        identificar combinaciones óptimas según perfil de inversión y tolerancia al riesgo.
                     </p>
+
                     <div class="project-links">
                         <a href="https://colab.research.google.com/drive/1oubI8E6efz6R2ZvSaM6_75JzeV0KbcWK#scrollTo=1LJ9Dz_Zlj2T"
-                           target="_blank" class="btn btn-code">Ver&nbsp;Código&nbsp;en&nbsp;Colab</a>
+                           target="_blank" class="btn btn-code">Ver Código en Colab</a>
+
                         <a href="https://app.powerbi.com/view?r=eyJrIjoiMjhiOGMyNWUtMmQxYi00NDFhLTlmOGQtYzNiODA3ZGMzNDk0IiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9"
-                           target="_blank" class="btn btn-dashboard">Ver&nbsp;Dashboard</a>
+                           target="_blank" class="btn btn-dashboard">Ver Dashboard</a>
                     </div>
-                </div>
-                <div class="project-side-image">
-                    <img src="assets/strategic_asset_analysis.png" alt="Ilustración del análisis de activos estratégicos" />
                 </div>
             </div>
 
@@ -220,33 +206,38 @@
             <div class="dashboard">
                 <iframe
                     src="https://app.powerbi.com/view?r=eyJrIjoiMjhiOGMyNWUtMmQxYi00NDFhLTlmOGQtYzNiODA3ZGMzNDk0IiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9"
-                    title="Dashboard de Strategic Asset Analysis"
-                    allowfullscreen
                 ></iframe>
             </div>
         </section>
 
-        <!-- Proyecto 3: Supply Chain Efficiency Analysis -->
+        <!-- PROYECTO 3 -->
         <section class="project project-3" id="proyecto3">
+
             <div class="project-content">
+                <!-- IMAGEN IZQUIERDA -->
+                <div class="project-side-image">
+                    <img src="assets/supply_chain_efficiency.png" alt="Eficiencia en Cadena de Suministro" />
+                </div>
+
+                <!-- TEXTO DERECHA -->
                 <div class="project-text">
-                    <span class="project-badge project-badge-3">Proyecto&nbsp;3</span>
-                    <h2>Supply&nbsp;Chain&nbsp;Efficiency&nbsp;Analysis</h2>
+                    <span class="project-badge project-badge-3">Proyecto 3</span>
+                    <h2>Supply Chain Efficiency Analysis</h2>
+
                     <p>
-                        Un retraso en la entrega revela ineficiencias que afectan costos y satisfacción del cliente.
-                        En este análisis identifiqué cuellos de botella, rendimiento por producto y ruta, y patrones
-                        logísticos que influyen en los tiempos de envío. El dashboard permite explorar cada segmento
-                        de la cadena y priorizar mejoras basadas en evidencia.
+                        Analicé tiempos de envío, rutas, desempeño por producto y modos de transporte para
+                        detectar cuellos de botella y oportunidades de mejora dentro de la cadena de suministro.
+                        El dashboard interactivo permite explorar el impacto financiero y logístico de cada decisión,
+                        priorizando acciones basadas en evidencia real.
                     </p>
+
                     <div class="project-links">
                         <a href="https://colab.research.google.com/drive/1UYurl7BeBwWREzreNlFHaqN1b8HZUbly#scrollTo=V3QY7qqajnZR"
-                           target="_blank" class="btn btn-code">Ver&nbsp;Código&nbsp;en&nbsp;Colab</a>
+                           target="_blank" class="btn btn-code">Ver Código en Colab</a>
+
                         <a href="https://app.powerbi.com/view?r=eyJrIjoiY2EzODI0NmUtNThlYS00OGI0LWI0YTYtOGYzZmU2NjIxMzhlIiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9"
-                           target="_blank" class="btn btn-dashboard">Ver&nbsp;Dashboard</a>
+                           target="_blank" class="btn btn-dashboard">Ver Dashboard</a>
                     </div>
-                </div>
-                <div class="project-side-image">
-                    <img src="assets/supply_chain_efficiency.png" alt="Ilustración del análisis de eficiencia en la cadena de suministro" />
                 </div>
             </div>
 
@@ -254,14 +245,12 @@
             <div class="dashboard">
                 <iframe
                     src="https://app.powerbi.com/view?r=eyJrIjoiY2EzODI0NmUtNThlYS00OGI0LWI0YTYtOGYzZmU2NjIxMzhlIiwidCI6IjJiNTYxNTExLTdkZGYtNDk1Yy04MTY0LWY1NmFlNzc2YzU0YSIsImMiOjh9"
-                    title="Dashboard de Supply Chain Efficiency Analysis"
-                    allowfullscreen
                 ></iframe>
             </div>
         </section>
     </main>
 
-    <!-- Sección de contacto -->
+    <!-- FOOTER -->
     <footer class="footer" id="contacto">
         <div class="container">
             <h2>Contacto</h2>
@@ -270,10 +259,11 @@
                 no dudes en ponerte en contacto.
             </p>
             <p>
-                Correo electrónico:
+                Correo:
                 <a href="mailto:eyoanros@gmail.com">eyoanros@gmail.com</a>
             </p>
         </div>
     </footer>
+
 </body>
 </html>
