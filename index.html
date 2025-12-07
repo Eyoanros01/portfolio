@@ -13,13 +13,12 @@
         rel="stylesheet"
     />
 
-    <!-- Puedes dejar tu styles.css, pero todo lo importante lo controlo aquí -->
     <link rel="stylesheet" href="styles.css" />
 
     <style>
         :root {
             --bg: #020617;          /* fondo casi negro */
-            --bg-elevated: #020617; /* igual que Brittany, muy limpio */
+            --bg-elevated: #020617;
             --fg: #e5e7eb;          /* texto principal */
             --muted: #94a3b8;       /* texto secundario */
             --accent: #22c55e;      /* verde principal */
@@ -53,7 +52,6 @@
         }
 
         /* LAYOUT PRINCIPAL: sidebar izquierda + contenido derecha */
-
         .layout {
             display: flex;
             min-height: 100vh;
@@ -70,8 +68,7 @@
             }
         }
 
-        /* SIDEBAR (tipo Brittany) */
-
+        /* SIDEBAR */
         .sidebar {
             flex: 0 0 280px;
             display: flex;
@@ -152,7 +149,6 @@
         }
 
         /* CONTENIDO PRINCIPAL */
-
         .main {
             flex: 1;
         }
@@ -186,8 +182,7 @@
             line-height: 1.7;
         }
 
-        /* HERO / ABOUT COMBINADOS (tu texto adaptado al estilo) */
-
+        /* ABOUT */
         .intro-highlight {
             font-size: 1.1rem;
             margin-bottom: 1.5rem;
@@ -236,41 +231,23 @@
             color: var(--accent);
         }
 
-        /* EXPERIENCIA (muy resumida tipo Brittany, pero con tu enfoque) */
-
-        .experience-list {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1.8rem;
+        /* PROYECTOS – CARDS OSCUROS */
+        #proyectos.section {
+            border-bottom: 1px solid rgba(148, 163, 184, 0.12);
         }
-
-        .experience-item h3 {
-            margin: 0 0 0.25rem;
-            font-size: 1rem;
-        }
-
-        .experience-item .time {
-            font-size: 0.85rem;
-            color: var(--muted);
-            margin-bottom: 0.25rem;
-        }
-
-        .experience-item .stack {
-            font-size: 0.85rem;
-            color: var(--muted);
-        }
-
-        /* PROYECTOS: respetamos tu lógica actual */
 
         .project {
-            padding: 2.5rem 0;
+            padding: 2rem 1.75rem 2.25rem;
+            margin-bottom: 1.5rem;
+            border-radius: 1rem;
+            background:
+                radial-gradient(circle at top left, rgba(15, 23, 42, 0.9) 0, #020617 55%, #020617 100%);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
         }
 
-        .project + .project {
-            border-top: 1px solid rgba(148, 163, 184, 0.12);
+        .project:last-of-type {
+            margin-bottom: 0;
         }
 
         .project-info {
@@ -325,7 +302,7 @@
             height: 620px;
             border: none;
             border-radius: 12px;
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
             background: #020617;
         }
 
@@ -336,7 +313,6 @@
         }
 
         /* CONTACTO */
-
         .contact-links {
             margin-top: 1rem;
             display: flex;
@@ -353,7 +329,7 @@
             color: var(--accent);
         }
 
-        /* Quitamos la barra superior antigua (navbar) visualmente pero la dejamos para accesibilidad */
+        /* Ocultamos el nav antiguo */
         nav.navbar {
             display: none;
         }
@@ -361,7 +337,7 @@
 </head>
 <body>
 
-    <!-- Mantengo nav para no romper cosas, pero oculto visualmente -->
+    <!-- Nav antiguo oculto (no se ve, pero no rompe nada) -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#top" class="logo">Mi Portafolio</a>
@@ -375,55 +351,56 @@
     </nav>
 
     <div class="layout" id="top">
-        <!-- SIDEBAR ESTILO BRITTANY -->
+        <!-- SIDEBAR -->
         <aside class="sidebar">
             <div>
                 <div class="sidebar-header">
                     <h1>Esdras García</h1>
                     <h2>Data Analyst</h2>
                     <p>
-                        Construyo análisis y dashboards claros para banca, riesgo crediticio y negocios,
-                        combinando Python, SQL y Power BI con enfoque práctico.
+                        Analista de datos junior con enfoque en finanzas, riesgo crediticio y eficiencia operativa.
+                        Me interesa construir soluciones claras, medibles y fáciles de usar para equipos de negocio.
                     </p>
                 </div>
 
                 <nav class="sidebar-nav">
                     <ul>
                         <li><a href="#about"><span class="index">01.</span>Sobre mí</a></li>
-                        <li><a href="#experience"><span class="index">02.</span>Experiencia & skills</a></li>
-                        <li><a href="#proyectos"><span class="index">03.</span>Proyectos</a></li>
-                        <li><a href="#contacto"><span class="index">04.</span>Contacto</a></li>
+                        <li><a href="#proyectos"><span class="index">02.</span>Proyectos</a></li>
+                        <li><a href="#contacto"><span class="index">03.</span>Contacto</a></li>
                     </ul>
                 </nav>
             </div>
 
             <div class="sidebar-footer">
-                <div>Disponible para roles junior de análisis de datos.</div>
-                <div>Basado en Honduras · remoto LATAM/Global.</div>
+                <div>Perfil junior, orientado a aprender rápido y aportar desde el primer día.</div>
+                <div>Basado en Honduras · abierto a trabajo remoto.</div>
             </div>
         </aside>
 
         <!-- CONTENIDO PRINCIPAL -->
         <main class="main">
-            <!-- ABOUT / HERO -->
+            <!-- ABOUT -->
             <section class="section" id="about">
                 <div class="section-label">ABOUT</div>
                 <h2 class="section-title">Sobre mí</h2>
                 <div class="section-body">
                     <p class="intro-highlight">
-                        Soy un analista de datos con formación en ingeniería en informática. Me enfoco en
-                        transformar datos de negocio en historias claras para tomar decisiones mejores y más rápidas.
+                        Soy un analista de datos en etapa junior, con base técnica sólida y el foco puesto en
+                        convertir datos en decisiones accionables. Busco entornos donde pueda seguir creciendo y
+                        aportar valor de forma consistente.
                     </p>
                     <p>
                         Trabajo principalmente con <strong>Python</strong>, <strong>SQL</strong>,
                         <strong>Power&nbsp;BI</strong> y Excel para extraer, limpiar y modelar información.
-                        Me gusta diseñar dashboards que puedan leer tanto perfiles técnicos como gerenciales,
-                        priorizando siempre claridad y contexto de negocio.
+                        Me interesa especialmente el contexto de <strong>banca, riesgo crediticio y análisis
+                        financiero</strong>, donde los datos tienen impacto directo en rentabilidad y riesgo.
                     </p>
                     <p>
-                        Actualmente estoy construyendo un portafolio orientado a
-                        <strong>finanzas, riesgo crediticio y eficiencia operativa</strong>, simulando casos
-                        de uso reales de banca y consultoría para demostrar cómo pienso y cómo estructuro un análisis.
+                        Cada proyecto de mi portafolio está planteado como un caso de negocio real: defino el
+                        problema, creo una estructura de análisis clara, documento las decisiones técnicas y cierro
+                        con dashboards pensados para usuarios no técnicos. Mi objetivo es ser un analista junior
+                        confiable, que entiende el “por qué” detrás de cada métrica y no solo el “cómo”.
                     </p>
                     <div class="hero-cta">
                         <a href="#proyectos" class="btn">Ver proyectos con dashboards</a>
@@ -432,40 +409,7 @@
                 </div>
             </section>
 
-            <!-- EXPERIENCIA / SKILLS (resumen tipo Brittany) -->
-            <section class="section" id="experience">
-                <div class="section-label">EXPERIENCE &amp; SKILLS</div>
-                <h2 class="section-title">Cómo aplico mis habilidades</h2>
-                <div class="section-body">
-                    <ul class="experience-list">
-                        <li class="experience-item">
-                            <div class="time">2024 — Presente</div>
-                            <h3>Proyectos autodidactas de análisis de datos</h3>
-                            <p>
-                                Desarrollo casos completos de negocio en torno a portafolios de inversión,
-                                riesgo de tarjetas de crédito y eficiencia en cadena de suministro, desde la
-                                limpieza de datos hasta dashboards ejecutivos.
-                            </p>
-                            <div class="stack">
-                                Python (pandas, matplotlib), SQL (PostgreSQL), Power BI, Excel.
-                            </div>
-                        </li>
-                        <li class="experience-item">
-                            <div class="time">Background previo</div>
-                            <h3>Soporte técnico &amp; análisis financiero básico</h3>
-                            <p>
-                                Experiencia previa en soporte técnico y análisis de mercados financieros me ayuda
-                                a entender tanto el lado técnico como el contexto de negocio y de usuario final.
-                            </p>
-                            <div class="stack">
-                                Atención al cliente, comunicación, pensamiento crítico y manejo del estrés.
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- PROYECTOS: AQUÍ RESPETO TU LÓGICA -->
+            <!-- PROYECTOS -->
             <section class="section" id="proyectos">
                 <div class="section-label">PROJECTS</div>
                 <h2 class="section-title">Proyectos con dashboards interactivos</h2>
@@ -577,16 +521,17 @@
                 <h2 class="section-title">Trabajemos juntos</h2>
                 <div class="section-body">
                     <p>
-                        Si te interesa mi trabajo y querés explorar cómo puedo aportar en tu equipo de datos,
-                        banca, consultoría o negocio digital, podemos agendar una llamada corta.
+                        Si te interesa mi trabajo y querés explorar cómo puedo aportar como analista de datos junior
+                        en tu equipo de banca, riesgo o negocio digital, podemos coordinar una conversación corta.
                     </p>
                     <p>
-                        Puedes escribirme directamente a:
+                        Puedes escribirme directamente a
                         <strong><a href="mailto:eyoanros@gmail.com">eyoanros@gmail.com</a></strong>
+                        y responderé lo antes posible.
                     </p>
                     <div class="contact-links">
                         <a href="mailto:eyoanros@gmail.com">Enviar correo</a>
-                        <!-- Si luego tenés LinkedIn / GitHub, se agregan aquí -->
+                        <!-- Aquí luego se puede añadir LinkedIn / GitHub -->
                     </div>
                 </div>
             </section>
