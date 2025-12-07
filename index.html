@@ -21,7 +21,7 @@
             --bg-elevated: #020617;
             --fg: #e5e7eb;          /* texto principal */
             --fg-strong: #f9fafb;   /* texto muy visible (títulos) */
-            --muted: #9ca3af;       /* texto secundario (un poco más claro que antes) */
+            --muted: #9ca3af;       /* texto secundario */
             --accent: #22c55e;      /* verde principal */
             --accent-soft: rgba(34, 197, 94, 0.15);
             --border-subtle: #1f2933;
@@ -239,6 +239,16 @@
             border-bottom: 1px solid rgba(148, 163, 184, 0.12);
         }
 
+        .projects-intro {
+            margin-bottom: 1.8rem;
+        }
+
+        .projects-intro p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.96rem;
+        }
+
         .project {
             padding: 2rem 1.75rem 2.25rem;
             margin-bottom: 1.5rem;
@@ -275,7 +285,7 @@
         .project-info h2 {
             margin: 0 0 0.75rem;
             font-size: 1.25rem;
-            color: var(--fg-strong);   /* TÍTULOS BIEN VISIBLES */
+            color: var(--fg-strong);
         }
 
         .project-info p {
@@ -303,22 +313,22 @@
         }
 
         .dashboard {
-            overflow: hidden; /* evita sobrantes alrededor del iframe */
+            overflow: hidden;   /* recorta sobrantes del reporte */
             border-radius: 12px;
         }
 
         .dashboard iframe {
             width: 100%;
-            height: 620px;
+            height: 540px;      /* más bajo para evitar la franja blanca inferior */
             border: none;
             border-radius: 12px;
-            display: block;            /* elimina espacios extra */
-            background: #020617;       /* hace match con el fondo */
+            display: block;
+            background: #020617;
         }
 
         @media (max-width: 768px) {
             .dashboard iframe {
-                height: 480px;
+                height: 420px;
             }
         }
 
@@ -423,6 +433,14 @@
             <section class="section" id="proyectos">
                 <div class="section-label">PROJECTS</div>
                 <h2 class="section-title">Proyectos con dashboards interactivos</h2>
+
+                <div class="section-body projects-intro">
+                    <p>
+                        Todos los dashboards de esta sección están incrustados directamente en la página.
+                        Puedes interactuar con ellos aquí mismo: filtrar, pasar el cursor sobre los gráficos
+                        y explorar cada vista sin necesidad de abrir nuevas pestañas.
+                    </p>
+                </div>
 
                 <!-- Proyecto 1: Credit Risk Analysis Cards -->
                 <section class="project project-1" id="proyecto1">
